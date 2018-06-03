@@ -9,6 +9,10 @@ import org.jsoup.nodes.Element;
 public class Application {
     public static void main(String[] args) throws Exception {
         
+    	Bible bible = new Bible();
+    	bible.parse();
+    	
+    	/*
         // Parse HTML String using JSoup library
         String HTMLSTring = "<!DOCTYPE html>"
                         + "<html>"
@@ -39,25 +43,25 @@ public class Application {
          e.printStackTrace();
        }
        System.out.println("Jsoup Can read HTML page from URL, title : " + title);
-  
+  */
           
      
        // Parse an HTML file in Java
-       Document htmlFile = null;
-       try {
-           htmlFile = Jsoup.parse(new File("login.html"), "ISO-8859-1");
+       //Document htmlFile = null;
+       //try {
+         //  htmlFile = Jsoup.parse(new File("login.html"), "ISO-8859-1");
            //Document htmlFile = Jsoup.parse("login.html", "ISO-8859-1"); // wrong
-       } catch (IOException e) {
-           e.printStackTrace();
-       } 
+       //} catch (IOException e) {
+       //    e.printStackTrace();
+       //} 
       
-       title = htmlFile.title();
+       //title = htmlFile.title();
     
-       Element div = htmlFile.getElementById("login");
-       String cssClass = div.className(); // getting class form HTML element
+       //Element div = htmlFile.getElementById("login");
+       //String cssClass = div.className(); // getting class form HTML element
           
-       System.out.println("Jsoup can also parse HTML file directly");
-       System.out.println("title : " + title);
-       System.out.println("class of div tag : " + cssClass);
+       //System.out.println("Jsoup can also parse HTML file directly");
+       //System.out.println("title : " + title);
+       //System.out.println("class of div tag : " + cssClass);
     }
 }
